@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ingresos-egresos" target="11" />
+      <module name="ingresos-egresos" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
