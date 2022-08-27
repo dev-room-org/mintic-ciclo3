@@ -1,0 +1,15 @@
+Index: ingresos-egresos/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/ingresos-egresos/src/main/resources/application.properties b/ingresos-egresos/src/main/resources/application.properties
+--- a/ingresos-egresos/src/main/resources/application.properties	(revision b0747c492b4fc07678d7d0274daeecf7f4ea4577)
++++ b/ingresos-egresos/src/main/resources/application.properties	(date 1661608663911)
+@@ -1,1 +1,3 @@
+-
++spring.datasource.url=jdbc:postgresql://localhost:5432/ciclo3
++spring.datasource.username=postgres
++spring.datasource.password=12345

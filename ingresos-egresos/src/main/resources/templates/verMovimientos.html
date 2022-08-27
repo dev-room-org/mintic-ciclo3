@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <title>Lista de Empresas - Ciclo3</title>
+  <title>Lista de Movimientos - Ciclo3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -11,29 +11,27 @@
 <body>
 
 <div class="container">
-  <h1> Lista de Empresas</h1>
+  <h1> Lista de Movimientos</h1>
   <!--Dibujamos la tabla-->
   <table class="table">
     <tr>
       <th>ID</th>
-      <th>Nombre</th>
-      <th>Dirección</th>
-      <th>Telefono</th>
-      <th>NIT</th>
+      <th>Monto</th>
+      <th>Concepto</th>
+      <th>Empleado</th>
       <th>Editar</th>
       <th>Eliminar</th>
     </tr>
 
     <!--Llenamos la tabla dibujada-->
     <!--En nuestro controller, creamos en viewEmpresa un modelo con un atributo llamado emplist donde esta guardada la lista de todas las empresas-->
-    <tr th:each="empresa : ${emplist}">
-      <td th:text="${empresa.id}"></td>
-      <td th:text="${empresa.nombre}"></td>
-      <td th:text="${empresa.direccion}"></td>
-      <td th:text="${empresa.telefono}"></td>
-      <td th:text="${empresa.NIT}"></td>
-      <td><button type="button" class="btn btn-warning"><a th:href="@{/editarEmpresa}">Editar</a></button></td>
-      <td><button type="button" class="btn btn-danger"><a th:href="@{/eliminarEmpresa}">Eliminar</a></button></td>
+    <tr th:each="movimiento : ${movlist}">
+      <td th:text="${movimiento.id}"></td>
+      <td th:text="${movimiento.monto}"></td>
+      <td th:text="${movimiento.concepto}"></td>
+      <td th:text="${movimiento.empleado}"></td>
+      <td><button type="button" class="btn btn-warning"><a th:href="@{/editarMovimientoDinero}">Editar</a></button></td>
+      <td><button type="button" class="btn btn-danger"><a th:href="@{/eliminarMovimientoDinero}">Eliminar</a></button></td>
     </tr>
   </table>
 
