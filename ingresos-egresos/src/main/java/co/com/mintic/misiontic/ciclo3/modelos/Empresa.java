@@ -1,6 +1,8 @@
 package co.com.mintic.misiontic.ciclo3.modelos;
 
 import javax.persistence.*;
+import java.util.List;
+import java.util.Set;
 
 @Entity
 @Table(name="Empresa")
@@ -12,15 +14,18 @@ public class Empresa {
     private String direccion;
     private String telefono;
     private String NIT;
+    @OneToMany(mappedBy = "empresa")
+    private Set<Empleado> empleados;
 
     public Empresa() {
     }
 
-    public Empresa(String nombre, String direccion, String telefono, String NIT) {
+    public Empresa(String nombre, String direccion, String telefono, String NIT, Set<Empleado> empleados) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.telefono = telefono;
         this.NIT = NIT;
+        this.empleados = empleados;
     }
 
     public int getId() {
@@ -61,6 +66,14 @@ public class Empresa {
 
     public void setNIT(String NIT) {
         this.NIT = NIT;
+    }
+
+    public Set<Empleado> getEmpleados() {
+        return empleados;
+    }
+
+    public void setEmpleados(Set<Empleado> empleados) {
+        this.empleados = empleados;
     }
 }
 
